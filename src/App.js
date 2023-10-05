@@ -1,14 +1,13 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Container from './components/Container/Container';
+import IntroPage from './components/gameScreen/introPage/IntroPage';
 
 
 function App() {
   return (
-    <Fragment>
-     
-      <h1>Hello World</h1>
-      <h1>Hello World</h1>
-    </Fragment>
+    <Container>
+      <IntroPage />
+    </Container>
   );
 }
 

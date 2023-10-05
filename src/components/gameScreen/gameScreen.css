@@ -1,0 +1,10 @@
+.gameGridScreen {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+    grid-template-rows: 1fr auto auto auto;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    row-gap: 1rem;
+}
