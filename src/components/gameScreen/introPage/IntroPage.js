@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react'
-import GameScreen from '../GameScreen'
 import './introPage.css'
 
-const IntroPage = () => {
+const IntroPage = (props) => {
+
+
     return (
-        <GameScreen>
+        <Fragment>
             <div className='header'>
                 <h1>Space Invaders</h1>
             </div>
@@ -19,11 +20,11 @@ const IntroPage = () => {
                     <p>React JS</p>
                 </div>
                 <div className='col-3'>
-                    <button className='Start-btn'>Start</button>
+                    <button className='Start-btn' onClick={props.onChangeToTestPage} >Start</button>
                 </div>
 
             </div>
-        </GameScreen>
+        </Fragment>
 
     )
 }

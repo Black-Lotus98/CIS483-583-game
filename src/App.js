@@ -1,12 +1,12 @@
 import React from 'react';
 import Container from './components/Container/Container';
-import IntroPage from './components/gameScreen/introPage/IntroPage';
+import GameScreen from './components/gameScreen/GameScreen';
 
 
 function App() {
   return (
     <Container>
-      <IntroPage />
+      <GameScreen />
     </Container>
   );
 }
