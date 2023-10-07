@@ -1,7 +1,8 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import "./mainMenu.css";
 
 const MainMenu = (props) => {
+
   return (
     <Fragment>
       <div className="report">
@@ -49,17 +50,18 @@ const MainMenu = (props) => {
       </div>
       <div className="options">
         <div className="option-1">
-          <button className="option-btn" onClick={props.onChangeToGrains}>
+          <button className="option-btn" onClick={props.changeToGrainsPage}>
             Grain Market
           </button>
         </div>
         <div className="option-2">
-          <button className="option-btn" onClick={props.onChangeToRealEstate}>
+          <button className="option-btn" onClick={props.changeToLandsPage}>
             Land Office
           </button>
         </div>
       </div>
     </Fragment>
+
   );
 };
 

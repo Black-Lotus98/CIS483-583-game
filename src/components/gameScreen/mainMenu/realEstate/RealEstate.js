@@ -23,7 +23,7 @@ const RealEstate = (props) => {
                     <p>React JS</p> */}
                 </div>
                 <div className='col-3'>
-                    <button className='Start-btn' onClick={props.onChangeToTestPage} >Start</button>
+                    <button className='Start-btn' onClick={props.changeToMainMenu} >Start</button>
                 </div>
 
             </div>
