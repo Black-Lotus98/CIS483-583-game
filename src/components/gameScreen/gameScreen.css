@@ -1,7 +1,7 @@
 .gameGridScreen {
     display: grid;
-    grid-template-columns: 1fr auto auto auto;
-    grid-template-rows: 1fr auto auto auto;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
     justify-content: center;
     align-items: center;
     width: 100%;

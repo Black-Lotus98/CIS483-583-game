@@ -7,8 +7,8 @@ const MainMenu = (props) => {
       <div className="report">
         {/* todo: Figure out x, y, z */}
         <h3>Big Alien Mafia Gangster Boss</h3>
-        <span>Human Beings ate x% of your food!</span>
-        <span>y Weather z Harvest</span>
+        <h4>Human Beings ate x% of your food!</h4>
+        <h5>y Weather z Harvest</h5>
       </div>
       <div className="stats">
         {/* todo: numbers must be defined */}
@@ -40,8 +40,11 @@ const MainMenu = (props) => {
       </div>
       <div className="instructions">
         <p>
-          Press Zero To continue Or Number Of Transactions If You Wish To Buy Or
-          Sell
+
+          <button className='continue-btn' onClick={props.changeToTestPage} >
+            Press here to continue
+          </button>
+          or the buttons below if you wish to buy or Sell grains and lands
         </p>
       </div>
       <div className="options">
@@ -56,10 +59,6 @@ const MainMenu = (props) => {
           </button>
         </div>
       </div>
-
-      {/*  <div className="MainMenuScreen">
-            <button className='Start-btn' onClick={props.changeToTestPage} >Start</button>
-        </div> */}
     </Fragment>
   );
 };
