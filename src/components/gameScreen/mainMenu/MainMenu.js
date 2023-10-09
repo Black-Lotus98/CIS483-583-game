@@ -1,5 +1,4 @@
-import React, { Fragment, useState } from "react";
-import "./mainMenu.css";
+import React, { Fragment } from "react";
 
 const MainMenu = (props) => {
 
@@ -40,26 +39,27 @@ const MainMenu = (props) => {
         </div>
       </div>
       <div className="instructions">
-        <p>
-
-          <button className='continue-btn' onClick={props.changeToTestPage} >
-            Press here to continue
-          </button>
-          or the buttons below if you wish to buy or Sell grains and lands
-        </p>
+        Use the buttons below if you wish to buy or Sell grains and lands
       </div>
       <div className="options">
         <div className="option-1">
-          <button className="option-btn" onClick={props.changeToGrainsPage}>
-            Grain Market
+          <button className="option-btn" onClick={props.changeToMeanPage}>
+            Meat Market
           </button>
         </div>
         <div className="option-2">
-          <button className="option-btn" onClick={props.changeToLandsPage}>
-            Land Office
+          <button className="option-btn" onClick={props.changeToCountryPage}>
+            Invaded Countries
           </button>
         </div>
       </div>
+
+      <div className="nextScreen">
+        <button className='continue-btn' onClick={props.changeToMeatRelease} >
+          Continue
+        </button>
+      </div>
+
     </Fragment>
 
   );

@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react'
-import './introPage.css'
 
 const IntroPage = (props) => {
 

@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import './gameScreen.css'
 import IntroPage from './introPage/IntroPage'
 import TestPage from './testPage/TestPage';
 import MainMenu from './mainMenu/MainMenu';
-import Grains from './mainMenu/grains/Grains';
-import RealEstate from './mainMenu/realEstate/RealEstate';
+import MeatMarket from './meatMarket/MeatMarket';
+import Countries from './countries/Countries';
+import MeatRelease from './meatRelease/MeatRelease';
 
 
 const GameScreen = (props) => {
@@ -22,13 +22,19 @@ const GameScreen = (props) => {
         setCurrentScreen('mainPage');
     }
 
-    const changeToLandsPage = () => {
-        setCurrentScreen('lands');
+    const changeToCountryPage = () => {
+        setCurrentScreen('country');
     }
 
-    const changeToGrainsPage = () => {
-        setCurrentScreen('grains');
+    const changeToMeatPage = () => {
+        setCurrentScreen('meatStore');
     }
+
+
+    const changeToMeatRelease = () => {
+        setCurrentScreen('meatRelease');
+    }
+
 
 
     let renderedScreen;
@@ -37,13 +43,16 @@ const GameScreen = (props) => {
             renderedScreen = <TestPage changeToIntroPage={changeToIntroPage} />;
             break;
         case 'mainPage':
-            renderedScreen = <MainMenu changeToTestPage={changeToTestPage} changeToLandsPage={changeToLandsPage} changeToGrainsPage={changeToGrainsPage} />;
+            renderedScreen = <MainMenu changeToMeatRelease={changeToMeatRelease} changeToCountryPage={changeToCountryPage} changeToMeatPage={changeToMeatPage} />;
             break;
-        case 'grains':
-            renderedScreen = <Grains changeToMainMenu={changeToMainMenu} />;
+        case 'meatStore':
+            renderedScreen = <MeatMarket changeToMainMenu={changeToMainMenu} />;
             break;
-        case 'lands':
-            renderedScreen = <RealEstate changeToMainMenu={changeToMainMenu} />;
+        case 'country':
+            renderedScreen = <Countries changeToMainMenu={changeToMainMenu} />;
+            break;
+        case 'meatRelease':
+            renderedScreen = <MeatRelease changeToTestPage={changeToTestPage} />;
             break;
         default:
             renderedScreen = <IntroPage changeToMainMenu={changeToMainMenu} />;

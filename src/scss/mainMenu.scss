@@ -25,6 +25,7 @@ h5 {
   width: 100%;
   height: 100%;
   border: ridge 1rem #b6f486;
+  font-weight: bold;
 }
 
 .d-stats-flex {
@@ -40,54 +41,39 @@ h5 {
 
 .grains {
   order: 1;
-  border-right: ridge .5rem #b6f486;
+  border-right: ridge 0.5rem #b6f486;
 }
 
 .grain-demand {
   order: 2;
-  border-right: ridge .5rem #b6f486;
+  border-right: ridge 0.5rem #b6f486;
 }
 
 .grain-price {
   order: 3;
-  border-right: ridge .5rem #b6f486;
+  border-right: ridge 0.5rem #b6f486;
 }
 
 .land-price {
   order: 4;
-  border-right: ridge .5rem #b6f486;
+  border-right: ridge 0.5rem #b6f486;
 }
 
 .treasury-gold {
   order: 5;
 }
 
-
 .instructions {
   grid-area: 7 / 1 / 8 / 13;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
 }
 
-.continue-btn {
-  background: none;
-  border: none;
-  text-decoration: underline;
-  cursor: pointer;
-  font-size: 1.6rem;
-  font-weight: bold;
-  transition: 0.3s all;
-}
-.continue-btn:hover{
-  scale: 1.05;
-}
-
 .options {
-  grid-area: 8 / 1 / 13 / 13;
+  grid-area: 8 / 1 / 12 / 13;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -124,6 +110,7 @@ h5 {
   border: none;
   cursor: pointer;
   border: 10px ridge #b6f486;
+  font-family: "Big Pixel demo";
 
   transition: 0.5s all ease-in-out;
 }
@@ -133,4 +120,30 @@ h5 {
   color: #b6f486;
   transform: scale(1.1);
   border: 10px ridge #400e63;
+}
+
+.nextScreen {
+  grid-area: 12 / 1 / 13 / 13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.continue-btn {
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-family: "Alien Robot";
+  transition: 0.3s all;
+  background-color: #b6f486;
+  color: #400e63;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 0.3rem;
+  cursor: pointer;
+  border: 10px ridge #b6f486;
+}
+
+.continue-btn:hover {
+  scale: 1.05;
 }
