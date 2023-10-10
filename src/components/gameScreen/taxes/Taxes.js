@@ -4,10 +4,10 @@ const Taxes = (props) => {
     
     return (
         <Fragment>
-            <div className='header'>
+            <div className='taxHeader'>
                 <h2>Country Revenue</h2>
             </div>
-            <div className='lastYear'>
+            {/* <div className='lastYear'>
                 <h4>Percent Levied Last Year:</h4>
             </div>
             <div className='customs'>
@@ -21,7 +21,7 @@ const Taxes = (props) => {
             </div>
             <div className='justice'>
                 <h4>Justice</h4>
-            </div>
+            </div> */}
 
   
         </Fragment>
