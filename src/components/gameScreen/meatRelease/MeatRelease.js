@@ -15,7 +15,7 @@ const MeatRelease = (props) => {
             <div id="input">
             <input type="text" id="input-text"/>
             <input type="checkbox" id="checkbox" onChange={handleCheckboxChange} />
-            {isChecked && (<button className='continue-btn' onClick={props.changeToTestPage} >
+            {isChecked && (<button className='continue-btn' onClick={props.changeToScientistReport} >
                 Continue
             </button>)}
             </div>
