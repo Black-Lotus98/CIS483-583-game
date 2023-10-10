@@ -59,6 +59,11 @@ const MainMenu = (props) => {
           Continue
         </button>
       </div>
+      <div className="nextScreen">
+        <button className='continue-btn' onClick={props.changeToMeatRelease} >
+          Continue
+        </button>
+      </div>
 
     </Fragment>
 
