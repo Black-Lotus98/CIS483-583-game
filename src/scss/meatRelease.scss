@@ -1,0 +1,21 @@
+#content{
+    display: flex;
+    flex-direction: column;
+    width:850px;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+}
+
+#input{
+    display: flex;
+    flex-direction: row;
+
+}
+
+#input-text{
+    padding: 2px;
+    border: ridge 1rem #b6f486;
+    font-family: "Alien Robot";
+}

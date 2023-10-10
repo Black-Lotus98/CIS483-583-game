@@ -6,6 +6,8 @@ import MeatMarket from './meatMarket/MeatMarket';
 import Countries from './countries/Countries';
 import MeatRelease from './meatRelease/MeatRelease';
 import Taxes from './taxes/Taxes';
+import Map from './map/Map';
+import Scientists from './scientists/Scientists';
 
 
 const GameScreen = (props) => {
@@ -35,17 +37,21 @@ const GameScreen = (props) => {
     const changeToMeatRelease = () => {
         setCurrentScreen('meatRelease');
     }
-
     const changeToTaxes = () => {
         setCurrentScreen('taxes');
     }
 
-
+    const changeToMap = () => {
+        setCurrentScreen('map');
+    }
+    const changeToScientistReport = () => {
+        setCurrentScreen('scientistReport');
+    }
 
     let renderedScreen;
     switch (currentScreen) {
         case 'test':
-            renderedScreen = <TestPage changeToIntroPage={changeToIntroPage} changeToTaxes={changeToTaxes} />;
+            renderedScreen = <TestPage changeToIntroPage={changeToIntroPage} changeToTaxes={changeToTaxes} changeToMap={changeToMap} />;
             break;
         case 'mainPage':
             renderedScreen = <MainMenu changeToMeatRelease={changeToMeatRelease} changeToCountryPage={changeToCountryPage} changeToMeatPage={changeToMeatPage} />;
@@ -57,7 +63,13 @@ const GameScreen = (props) => {
             renderedScreen = <Countries changeToMainMenu={changeToMainMenu} />;
             break;
         case 'meatRelease':
-            renderedScreen = <MeatRelease changeToTestPage={changeToTestPage} />;
+            renderedScreen = <MeatRelease changeToScientistReport={changeToScientistReport} />;
+            break;
+        case 'scientistReport':
+            renderedScreen = <Scientists changeToTestPage={changeToTestPage} />;
+            break;
+        case 'map':
+            renderedScreen = <Map changeToTestPage={changeToTestPage} />;
             break;
         case 'taxes':
             renderedScreen = <Taxes changeToTestPage={changeToTestPage} />;
@@ -73,4 +85,4 @@ const GameScreen = (props) => {
     )
 }
 
-export default GameScreen
+export default GameScreen;
