@@ -5,6 +5,9 @@ import MainMenu from './mainMenu/MainMenu';
 import MeatMarket from './meatMarket/MeatMarket';
 import Countries from './countries/Countries';
 import MeatRelease from './meatRelease/MeatRelease';
+import Map from './map/Map';
+import Scientists from './scientists/Scientists';
+
 
 
 const GameScreen = (props) => {
@@ -34,13 +37,17 @@ const GameScreen = (props) => {
     const changeToMeatRelease = () => {
         setCurrentScreen('meatRelease');
     }
-
-
+    const changeToMap = () => {
+        setCurrentScreen('map');
+    }
+    const changeToScientistReport = () => {
+        setCurrentScreen('scientistReport');
+    }
 
     let renderedScreen;
     switch (currentScreen) {
         case 'test':
-            renderedScreen = <TestPage changeToIntroPage={changeToIntroPage} />;
+            renderedScreen = <TestPage changeToIntroPage={changeToIntroPage} changeToMap={changeToMap} />;
             break;
         case 'mainPage':
             renderedScreen = <MainMenu changeToMeatRelease={changeToMeatRelease} changeToCountryPage={changeToCountryPage} changeToMeatPage={changeToMeatPage} />;
@@ -52,7 +59,13 @@ const GameScreen = (props) => {
             renderedScreen = <Countries changeToMainMenu={changeToMainMenu} />;
             break;
         case 'meatRelease':
-            renderedScreen = <MeatRelease changeToTestPage={changeToTestPage} />;
+            renderedScreen = <MeatRelease changeToScientistReport={changeToScientistReport} />;
+            break;
+        case 'scientistReport':
+            renderedScreen = <Scientists changeToTestPage={changeToTestPage} />;
+            break;
+        case 'map':
+            renderedScreen = <Map changeToTestPage={changeToTestPage} />;
             break;
         default:
             renderedScreen = <IntroPage changeToMainMenu={changeToMainMenu} />;
@@ -65,4 +78,4 @@ const GameScreen = (props) => {
     )
 }
 
-export default GameScreen
+export default GameScreen;

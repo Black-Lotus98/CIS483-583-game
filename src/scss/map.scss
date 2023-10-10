@@ -1,0 +1,146 @@
+.map-container {
+  grid-area: 1/ 1/ 13/ 13;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(13, 1fr);
+  width: 100%;
+  height: 100%;
+}
+
+.area1 {
+  grid-area: 13 / 2 / 14 / 3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.area2 {
+  grid-area: 13 / 3 / 14 / 4;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.area3 {
+  grid-area: 13 / 4 / 14 / 5;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.area4 {
+  grid-area: 13 / 5 / 14 / 6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.area5 {
+  grid-area: 13 / 6 / 14 / 7;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.area6 {
+  grid-area: 13 / 7 / 14 / 8;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.area7 {
+  grid-area: 13 / 8 / 14 / 9;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.area8 {
+  grid-area: 13 / 9 / 14 / 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.area9 {
+  grid-area: 13 / 10 / 14 / 11;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.command-area {
+  grid-area: 13 / 11 / 14 / 13;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  & button {
+    border: none;
+  }
+}
+
+.map-area {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & svg {
+    width: 90%;
+    height: 90%;
+  }
+
+  &-1 {
+    grid-area: 1/ 1/ 5/ 5;
+  }
+  &-2 {
+    grid-area: 1/ 5/ 5/ 9;
+  }
+  &-3 {
+    grid-area: 1/ 9/ 5/ 13;
+  }
+  &-4 {
+    grid-area: 5/ 1/ 9/ 5;
+  }
+  &-5 {
+    grid-area: 5/ 5/ 9/ 9;
+  }
+
+  &-6 {
+    grid-area: 5/ 9/ 9/ 13;
+  }
+  &-7 {
+    grid-area: 9/ 1/ 13/ 5;
+  }
+  &-8 {
+    grid-area: 9/ 5/ 13/ 9;
+  }
+  &-9 {
+    grid-area: 9/ 9/ 13/ 13;
+  }
+}
