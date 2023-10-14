@@ -1,0 +1,27 @@
+#name{
+    margin-bottom: 0px;
+    font-weight: bold;
+
+}
+#content{
+    display: flex;
+    flex-direction: column;
+    width:850px;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+    margin-top: 0px;
+}
+
+#input{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#input-text{
+    padding: 2px;
+    border: ridge 1rem #b6f486;
+    font-family: "Alien Robot";
+}
