@@ -16,7 +16,7 @@ const BirthAndDeaths = (props) => {
 
     return (
         <Fragment>
-            <div >
+            <div className='myDiv'>
 
 
             <p>Deaths: <output>{numberOfDeaths}</output></p>
