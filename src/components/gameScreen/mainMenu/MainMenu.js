@@ -3,18 +3,15 @@ import { GameDataContext } from "../../../gameDataContext/GameDataContext";
 // import UserData from "./user/user-context";
 
 const MainMenu = (props) => {
-  const [gameData, setGameData, resetGameData] = useContext(GameDataContext);
+  const [gameData, setGameData] = useContext(GameDataContext);
 
-  const updateMeat = () => {
-    setGameData({
-      ...gameData, // spreading the old data
-      meat: gameData.meat + 10 // just an example, you'd use real logic here
-    });
-  };
+  // const updateMeat = () => {
+  //   setGameData({
+  //     ...gameData, // spreading the old data
+  //     meat: gameData.meat + 10 // just an example, you'd use real logic here
+  //   });
+  // };
 
-  const handleResetClick = () => {
-    resetGameData();
-  };
 
   const sampleData = {
     sympathizers: gameData.sympathizers,
@@ -81,7 +78,7 @@ const MainMenu = (props) => {
         <button className='continue-btn' onClick={props.changeToMeatRelease} >
           Continue
         </button>
-        <button onClick={updateMeat}>Update Meat</button>
+        {/* <button onClick={updateMeat}>Update Meat</button> */}
       </div>
 
     </Fragment>

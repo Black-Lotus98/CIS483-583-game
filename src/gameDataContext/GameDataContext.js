@@ -53,15 +53,8 @@ export const GameDataProvider = ({ children }) => {
         localStorage.setItem('gameData', JSON.stringify(gameData));
     }, [gameData]);
 
-    const resetGameData = () => {
-        // Reset the state to the initial values
-        setGameData(initialState);
-        // Clear the game data from local storage
-        localStorage.removeItem('gameData');
-    };
-
     return (
-        <GameDataContext.Provider value={[gameData, setGameData, resetGameData]}>
+        <GameDataContext.Provider value={[gameData, setGameData]}>
             {children}
         </GameDataContext.Provider>
     );
