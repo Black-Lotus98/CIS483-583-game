@@ -8,20 +8,25 @@ export const GameDataProvider = ({ children }) => {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    const sympathizers = 1000;
-    const rebelHumans = getRandomValue(1, 25);
+    const sympathizers = getRandomValue(1, 25);
     const meat = getRandomValue(15, 20) * 1000;
     // const basePrice = 20;
 
     const meat_demand_Percentage = getRandomValue(20, 50) / 100;
     const meat_demand = meat_demand_Percentage * meat;
     // const meat_price = basePrice * (meat_demand_Percentage / (meat * (sympathizers / 100)));
-    let randomAdjustment = 0.8 + Math.random() * 0.4;
+
     const meat_price = 20;
     const country_power = 100;
     const treasury_gold = 75;
-    const xeno_matter = 1000;
-    const maxStocks = 10000;
+    const numberOfDeaths = 0;
+    const numberOfBirths = 0;
+    const deathRate = 0.02;
+    const birthRate = 0.01;
+    let inputText;
+
+
+
 
 
 
@@ -29,29 +34,20 @@ export const GameDataProvider = ({ children }) => {
 
     const initialState = {
         sympathizers: sympathizers,
-        rebelHumans: rebelHumans,
         meat: meat,
         meat_demand: meat_demand.toFixed(0),
         meat_price: meat_price.toFixed(0),
-        owned_stocks: 1000,
-        max_stocks: maxStocks,
-        randomAdjustment: randomAdjustment,
         country_power: country_power,
         treasury_gold: treasury_gold,
-        xeno_matter: xeno_matter,
+        numberOfDeaths : numberOfDeaths,
+        numberOfBirths : numberOfBirths,
+        deathRate : deathRate,
+        birthRate : birthRate,
+        inputText 
+
     }
 
 
-    // // Initial state
-    // const initialState = {
-    //     sympathizers: 0,
-    //     meat: 0,
-    //     meat_demand: 0,
-    //     meat_price: 0,
-    //     country_power: 0,
-    //     treasury_gold: 0,
-    //     // Add other necessary initial state values here
-    // };
 
     // Load state from local storage or set to initial state
     const [gameData, setGameData] = useState(() => {
@@ -64,8 +60,15 @@ export const GameDataProvider = ({ children }) => {
         localStorage.setItem('gameData', JSON.stringify(gameData));
     }, [gameData]);
 
+    const resetGameData = () => {
+        // Reset the state to the initial values
+        setGameData(initialState);
+        // Clear the game data from local storage
+        localStorage.removeItem('gameData');
+    };
+
     return (
-        <GameDataContext.Provider value={[gameData, setGameData]}>
+        <GameDataContext.Provider value={[gameData, setGameData, resetGameData]}>
             {children}
         </GameDataContext.Provider>
     );
