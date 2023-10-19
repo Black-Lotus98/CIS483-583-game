@@ -28,6 +28,9 @@ export const GameDataProvider = ({ children }) => {
         meat_price: meat_price.toFixed(0),
         country_power: country_power,
         treasury_gold: treasury_gold,
+        income_tax: 5,
+        country_tax: 25,
+        sales_tax: 10
     }
 
 

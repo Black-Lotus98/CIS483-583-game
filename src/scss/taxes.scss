@@ -110,7 +110,15 @@
   align-items: center;
   border: ridge 1rem #b6f486;
 }
-.prevInfo{
+.prevCustoms{
+  padding: 2px;
+  font-family: "Alien Robot";
+}
+.prevSales{
+  padding: 2px;
+  font-family: "Alien Robot";
+}
+.prevIncome{
   padding: 2px;
   font-family: "Alien Robot";
 }
@@ -206,7 +214,17 @@ p{
   align-items: center;
   border: ridge 1rem #b6f486;
 }
-.newInfo{
+.newCountryTax{
+  padding: 2px;
+  font-family: "Alien Robot";
+  width: 100px;
+}
+.newSales{
+  padding: 2px;
+  font-family: "Alien Robot";
+  width: 100px;
+}
+.newIncome{
   padding: 2px;
   font-family: "Alien Robot";
   width: 100px;
