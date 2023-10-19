@@ -1,7 +1,213 @@
+.taxContainer {
+    grid-area: 1/ 1/ 13/ 13;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+    width: 100%;
+    height: 100%;
+  }
 .taxHeader {
-    grid-area: 1 / 1 / 2 / 13;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  grid-area: 1 / 1 / 2 / 13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: ridge 1rem #b6f486;
+  font-weight: bold;
+  font-family: "Alien Robot";
+}
+//row start, column start, row end, column end
+.lastYear {
+  grid-area: 2 / 1 / 2 / 13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  // border: ridge 1rem #b6f486;
+  font-family: "Alien Robot";
+}
+//row start, column start, row end, column end
+.customs {
+  grid-area: 3 / 1 / 5 / 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  border: ridge 1rem #b6f486;
+  font-family: "Alien Robot";
+}
+//row start, column start, row end, column end
+.salesTax {
+  grid-area: 3 / 4 / 5 / 7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  border: ridge 1rem #b6f486;
+  font-family: "Alien Robot";
+}
+//row start, column start, row end, column end
+.incomeTax {
+  grid-area: 3 / 7 / 5 / 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  border: ridge 1rem #b6f486;
+  font-family: "Alien Robot";
+}
+//row start, column start, row end, column end
+.justice {
+  grid-area: 3 / 10 / 5 / 13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  border: ridge 1rem #b6f486;
+  font-family: "Alien Robot";
+} 
+//row start, column start, row end, column end
+.currentCustoms{
+  grid-area: 5 / 1 / 5 / 4;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: ridge 1rem #b6f486;
+}
+.currentSalesT{
+  grid-area: 5 / 4 / 5 / 7;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: ridge 1rem #b6f486;
+}
+.currentIncome{
+  grid-area: 5 / 7 / 5 / 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: ridge 1rem #b6f486;
+}
+.currentJustice{
+  grid-area: 5 / 10 / 5 / 13;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: ridge 1rem #b6f486;
+}
+.prevInfo{
+  padding: 2px;
+  font-family: "Alien Robot";
+}
+//row start, column start, row end, column end
+p{
+  grid-area: 6/ 1 / 7 / 13;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Alien Robot";
+  font-weight: bold;
+}
 
+//row start, column start, row end, column end
+.newCustoms {
+  grid-area: 7 / 1 / 8 / 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  border: ridge 1rem #b6f486;
+  font-family: "Alien Robot";
+}
+//row start, column start, row end, column end
+.newSalesTax {
+  grid-area: 7 / 4 / 8 / 7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  border: ridge 1rem #b6f486;
+  font-family: "Alien Robot";
+}
+//row start, column start, row end, column end
+.newIncomeTax {
+  grid-area: 7 / 7 / 8 / 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  border: ridge 1rem #b6f486;
+  font-family: "Alien Robot";
+}
+//row start, column start, row end, column end
+.newJustice {
+  grid-area: 7 / 10 / 8 / 13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  border: ridge 1rem #b6f486;
+  font-family: "Alien Robot";
+} 
+//row start, column start, row end, column end
+.updateCustoms{
+  grid-area: 8 / 1 / 10 / 4;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: ridge 1rem #b6f486;
+}
+.updateSales{
+  grid-area: 8 / 4 / 10 / 7;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: ridge 1rem #b6f486;
+}
+.updateIncomeTax{
+  grid-area: 8 / 7 / 10 / 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: ridge 1rem #b6f486;
+}
+.updateJustice{
+  grid-area: 8 / 10 / 10 / 13;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: ridge 1rem #b6f486;
+}
+.newInfo{
+  padding: 2px;
+  font-family: "Alien Robot";
+  width: 100px;
 }
