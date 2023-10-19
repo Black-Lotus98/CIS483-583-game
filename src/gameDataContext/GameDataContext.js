@@ -22,7 +22,7 @@ export const GameDataProvider = ({ children }) => {
     const numberOfDeaths = 0;
     const numberOfBirths = 0;
     const deathRate = 0.02;
-    const birthRate = 0.01;
+    const birthRate = 0.015;
     let inputText;
 
 

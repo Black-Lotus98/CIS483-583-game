@@ -9,15 +9,15 @@ const MeatRelease = (props) => {
         // Increase deaths and decrease births
         setGameData({
           ...gameData,
-          numberOfDeaths: gameData.numberOfDeaths + gameData.meat * gameData.deathRate,
-          numberOfBirths:  gameData.numberOfBirths - gameData.meat * gameData.birthRate,
+          numberOfDeaths:  gameData.meat * gameData.deathRate,
+          numberOfBirths:   gameData.meat * gameData.birthRate,
         });
       } else if (gameData.inputText > gameData.meat * 0.1) {
         // Decrease deaths and increase births
         setGameData({
           ...gameData,
-          numberOfDeaths:gameData.numberOfDeaths - gameData.meat * gameData.deathRate ,
-          numberOfBirths: gameData.numberOfBirths + gameData.meat * gameData.birthRate,
+          numberOfDeaths: gameData.meat * gameData.deathRate ,
+          numberOfBirths:  gameData.meat * gameData.birthRate,
         });
       }
     };
@@ -35,10 +35,10 @@ const MeatRelease = (props) => {
     return (
         <Fragment>
             <div id='content'>
-                <p id='name'>Sir of Santa Paravia</p>
+                <p id='name'>Dear Owner of Santa Paravia</p>
 
                 <p id="text">You have {gameData.meat} kg of Meat<br />
-                    Meat demand is {gameData.meat_demand} kg <br /> How much meat will you release for consumption knowing that you cannot give more than 20% of your stock  </p>
+                    Meat demand is {gameData.meat_demand} kg <br /> How much meat will you release for consumption knowing that you must keep at least 20% of your reserves  </p>
                 <div id="input">
                     <input
                    type="number"

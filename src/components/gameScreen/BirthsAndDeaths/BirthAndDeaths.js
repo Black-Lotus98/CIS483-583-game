@@ -11,19 +11,26 @@ const BirthAndDeaths = (props) => {
 
             return (
               <Fragment>
+                <div className='cont'>
+
+                
                   <div className='myDiv'>
+                  <p id='name'>Dear Owner of Santa Paravia</p>
+                
+      
+                  <p>{gameData.numberOfBirths} were born this year </p>
+                  <p> {gameData.numberOfDeaths} died this year </p>
+                 
       
       
-             
-                  <p>Deaths: {gameData.numberOfDeaths}</p>
-                  <p>Births: {gameData.numberOfBirths}</p>
-                  <p>Births: {gameData.inputText}</p>
       
-      
+                  </div>
+                  <div>
+
                   <button className='continue-btn' onClick={props.changeToScientistReport}>
                     Continue 
                   </button>
-      
+                  </div>
                   </div>
               </Fragment>
       
