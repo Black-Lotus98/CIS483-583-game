@@ -28,65 +28,100 @@ const Taxes = (props) => {
     };
 
 
+<<<<<<< HEAD
+=======
+const Taxes = (props, { selectedOption }) => {
+
+>>>>>>> main
     return (
         <Fragment>
             <div className="taxContainer">
                 <div className="taxHeader">
                     <h2>Country Revenue</h2>
                 </div>
-                 <div className="lastYear">
+                <div className="lastYear">
                     <h4>Percent Levied Last Year:</h4>
                     <div className="prev">
+<<<<<<< HEAD
                         <output type="text" className="prevInfo"/>
                         {(gameData.country_tax + gameData.sales_tax + gameData.income_tax)%100}%
+=======
+                        <output type="text" className="prevInfo" />
+                        5%
+>>>>>>> main
                     </div>
-                </div>               
+                </div>
                 <div className="customs">
+<<<<<<< HEAD
                     <h4>Country Duty:</h4>                    
                 </div>
                 <div className="currentCustoms">
                         <output type="number" className="prevCustoms newCountryTax"/>
                         {countryTax}%
+=======
+                    <h4>Customs Duty:</h4>
+                </div>
+                <div className="currentCustoms">
+                    <output type="text" className="prevInfo" />
+                    5%
+>>>>>>> main
                 </div>
                 <div className="salesTax">
                     <h4>Sales Tax:</h4>
                 </div>
                 <div className="currentSalesT">
+<<<<<<< HEAD
                         <output type="number" className="prevSales newSales"/>
                         {salesTax}% 
                     </div>
+=======
+                    <output type="text" className="prevInfo" />
+                    5%
+                </div>
+>>>>>>> main
                 <div className="incomeTax">
                     <h4>Income Tax:</h4>
                 </div>
                 <div className="currentIncome">
+<<<<<<< HEAD
                         <output type="number" className="prevIncome newIncome"/>
                         {incomeTax}%
                     </div>
+=======
+                    <output type="text" className="prevInfo" />
+                    5%
+                </div>
+>>>>>>> main
                 <div className="justice">
                     <h4>Justice:</h4>
-                </div> 
+                </div>
                 <div className="currentJustice">
                     <output type="text" className="selectedJustice">{selectedValue}</output>
                 </div>
                 <p>
                     Indicate Tax to Change or Press "Continue" to move on
-                </p> 
+                </p>
                 {/* ------------------------------- */}
                 <div className="newCustoms">
-                    <h4>Customs Duty:</h4>                    
+                    <h4>Customs Duty:</h4>
                 </div>
                 <div className="updateCustoms">
+<<<<<<< HEAD
                         <input
                             type="text"
                             className="newCountryTax"
                             value={countryTax}
                             onChange={handleCountryTaxChange}
                         /> 
+=======
+                    <input type="text" className="newInfo" />
+>>>>>>> main
                 </div>
                 <div className="newSalesTax">
                     <h4>Sales Tax:</h4>
                 </div>
                 <div className="updateSales">
+<<<<<<< HEAD
                 <div className="updateSales">
                         <input
                             type="text"
@@ -95,11 +130,15 @@ const Taxes = (props) => {
                             onChange={handleSalesTaxChange}
                         />
                 </div>
+=======
+                    <input type="text" className="newInfo" />
+>>>>>>> main
                 </div>
                 <div className="newIncomeTax">
                     <h4>Income Tax:</h4>
                 </div>
                 <div className="updateIncomeTax">
+<<<<<<< HEAD
                         <input
                             type="text"
                             className="newIncome"
@@ -116,6 +155,23 @@ const Taxes = (props) => {
                 <button className="continue-btn" onClick={props.changeToTestPage} >
                     Continue
                 </button>
+=======
+                    <input type="text" className="newInfo" />
+                </div>
+                <div className="newJustice">
+                    <h4>Justice:</h4>
+                </div>
+                <div className="updateJustice">
+                    <DropdownList />
+                </div>
+                <button className="contbtn" onClick={props.changeToMap} >
+                    Continue
+                </button>
+
+
+
+
+>>>>>>> main
             </div>
         </Fragment>
     );
