@@ -1,28 +1,17 @@
-.myDiv{
-    margin: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    width: max-content;
-
-}
-#name{
-    margin-bottom: 40px;
-    font-weight: bold;
-    font-size: larger;
+.name {
+  margin-bottom: 40px;
+  font-weight: bold;
+  font-size: larger;
 }
 
-.continue-btn{
-    margin-top: 20px;
+.continue-btn {
+  margin-top: 20px;
 }
 
-.cont{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 160px;
-    margin-top: 70px;
-
+.cont {
+  grid-area: 1/1/13/13;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

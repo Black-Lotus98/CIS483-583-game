@@ -3,7 +3,7 @@ import { GameDataContext } from "../../../gameDataContext/GameDataContext";
 // import UserData from "./user/user-context";
 
 const MainMenu = (props) => {
-  const [gameData, setGameData] = useContext(GameDataContext);
+  const [gameData /*, setGameData*/] = useContext(GameDataContext);
 
   // const updateMeat = () => {
   //   setGameData({
