@@ -3,7 +3,7 @@ import IntroPage from "./introPage/IntroPage";
 import TestPage from "./testPage/TestPage";
 import MainMenu from "./mainMenu/MainMenu";
 import MeatMarket from "./meatMarket/MeatMarket";
-import Countries from "./countries/Countries";
+import StockMarket from "./stockMarket/StockMarket";
 import MeatRelease from "./meatRelease/MeatRelease";
 import Taxes from "./taxes/Taxes";
 import Map from "./map/Map";
@@ -27,8 +27,8 @@ const GameScreen = (props) => {
     setCurrentScreen("mainPage");
   };
 
-  const changeToCountryPage = () => {
-    setCurrentScreen("country");
+  const changeToStockPage = () => {
+    setCurrentScreen("stockMarket");
   };
 
   const changeToMeatPage = () => {
@@ -60,27 +60,27 @@ const GameScreen = (props) => {
       );
       break;
     case "mainPage":
-      renderedScreen = <MainMenu changeToMeatRelease={changeToMeatRelease} changeToCountryPage={changeToCountryPage}
+      renderedScreen = <MainMenu changeToMeatRelease={changeToMeatRelease} changeToStockPage={changeToStockPage}
         changeToMeatPage={changeToMeatPage} />
 
       break;
     case "meatStore":
       renderedScreen = <MeatMarket changeToMainMenu={changeToMainMenu} />;
       break;
-    case "country":
-      renderedScreen = <Countries changeToMainMenu={changeToMainMenu} />;
+    case "stockMarket":
+      renderedScreen = <StockMarket changeToMainMenu={changeToMainMenu} />;
       break;
     case "meatRelease":
       renderedScreen = <MeatRelease changeToBirthsAndDeaths={changeToBirthsAndDeaths} />
       break;
     case "scientistReport":
-      renderedScreen = <Scientists changeToTestPage={changeToTestPage} />;
+      renderedScreen = <Scientists changeToTestPage={changeToTaxes} />;
       break;
     case "map":
       renderedScreen = <Map changeToTestPage={changeToTestPage} />;
       break;
     case "taxes":
-      renderedScreen = <Taxes changeToTestPage={changeToTestPage} />;
+      renderedScreen = <Taxes changeToMap={changeToMap} />;
       break;
     case "birthAndDeaths":
       renderedScreen = <BirthAndDeaths changeToScientistReport={changeToScientistReport} />

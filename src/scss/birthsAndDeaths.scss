@@ -1,14 +1,17 @@
-.myDiv{
-    margin: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-
+.name {
+  margin-bottom: 40px;
+  font-weight: bold;
+  font-size: larger;
 }
 
+.continue-btn {
+  margin-top: 20px;
+}
 
-.continue-btn{
-    margin-top: 50px;
-    margin-left:50px;
+.cont {
+  grid-area: 1/1/13/13;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

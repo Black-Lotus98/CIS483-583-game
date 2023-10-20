@@ -1,35 +1,34 @@
-import React, { Fragment,useState } from 'react'
+import React, { Fragment, useContext, useState } from 'react'
+import { GameDataContext } from "../../../gameDataContext/GameDataContext";
 
 
-const BirthAndDeaths = (props) => { 
-        const [numberOfDeaths, setNumberOfDeaths] = useState(0);
-        const [numberOfBirths, setNumberOfBirths] = useState(0);
 
-      
-        // Function to increment the number of deaths
-        const incrementDeaths = () => {
-          setNumberOfDeaths(numberOfDeaths + 1);
-        };
-        const incrementBirths = () => {
-            setNumberOfDeaths(numberOfBirths + 1);
-          };
+const BirthAndDeaths = (props) => {
 
-    return (
-        <Fragment>
-            <div className='myDiv'>
+  const [gameData, setGameData] = useContext(GameDataContext);
 
 
-            <p>Deaths: <output>{numberOfDeaths}</output></p>
-            <p>Births: <output>{numberOfBirths}</output></p>
 
-            <button className='continue-btn' onClick={props.changeToScientistReport}>
-              Continue
-            </button>
+  return (
+    <Fragment>
+      <div className='cont'>
+        <p className='name'>Dear Owner of Santa Paravia</p>
+        <p>{gameData.numberOfBirths} were born this year </p>
+        <p> {gameData.numberOfDeaths} died this year </p>
+        <div>
+          <button className='continue-btn' onClick={props.changeToScientistReport}>
+            Continue
+          </button>
+        </div>
+      </div>
+    </Fragment>
 
-            </div>
-        </Fragment>
+  )
 
-    )
-}
+};
+
+
+
+
 
 export default BirthAndDeaths

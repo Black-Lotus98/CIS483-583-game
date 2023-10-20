@@ -9,7 +9,8 @@
 @import "./scss/map";
 @import "./scss/scientists";
 @import "./scss/birthsAndDeaths.scss";
-
+@import "./scss/meatMarket";
+@import "./scss/stockMarket";
 
 @font-face {
   font-family: "Alien Robot";
@@ -19,4 +20,19 @@
 @font-face {
   font-family: "Big Pixel demo";
   src: url("fonts/Big\ Pixel\ demo.otf");
+}
+
+.contbtn {
+  position: absolute;
+  bottom: 10rem;
+  right: 30rem;
+  font-size: 2rem;
+  font-family: "Alien Robot";
+  background-color: #b6f486;
+  color: #400e63;
+  border: none;
+  padding: 1rem;
+  margin: 0.3rem;
+  cursor: pointer;
+  border: 10px ridge #b6f486;
 }

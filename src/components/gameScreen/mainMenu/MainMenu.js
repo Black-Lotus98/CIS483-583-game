@@ -3,7 +3,7 @@ import { GameDataContext } from "../../../gameDataContext/GameDataContext";
 // import UserData from "./user/user-context";
 
 const MainMenu = (props) => {
-  const [gameData, setGameData] = useContext(GameDataContext);
+  const [gameData /*, setGameData*/] = useContext(GameDataContext);
 
   // const updateMeat = () => {
   //   setGameData({
@@ -15,6 +15,7 @@ const MainMenu = (props) => {
 
   const sampleData = {
     sympathizers: gameData.sympathizers,
+    rebelHumans: gameData.rebelHumans,
     meat: gameData.meat,
     meat_demand: gameData.meat_demand,
     meat_price: gameData.meat_price,
@@ -27,7 +28,7 @@ const MainMenu = (props) => {
       <div className="report">
         {/* todo: Figure out x, y, z */}
         <h3>Big Alien Mafia Gangster Boss</h3>
-        <h4>Human Beings sacrificed {sampleData.sympathizers}% of your food!</h4>
+        <h4>Human Beings sacrificed {sampleData.rebelHumans}% of your food!</h4>
         <h5>y Weather z Harvest</h5>
       </div>
       <div className="stats">
@@ -68,8 +69,8 @@ const MainMenu = (props) => {
           </button>
         </div>
         <div className="option-2">
-          <button className="option-btn" onClick={props.changeToCountryPage}>
-            Invaded Countries
+          <button className="option-btn" onClick={props.changeToStockPage}>
+            Stock Market
           </button>
         </div>
       </div>

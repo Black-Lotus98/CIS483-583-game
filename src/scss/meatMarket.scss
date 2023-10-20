@@ -1,0 +1,75 @@
+.meatMarket {
+  grid-area: 1/ 1/ 9/ 13;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  font-family: "Alien Robot";
+  background-image: url(../images/alienMeatMarket.jpg);
+  background-size: cover;
+  border: ridge 1rem #b6f486;
+  background-position: bottom;
+}
+
+.marketActions {
+  grid-area: 9/ 1/ 13/ 13;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  font-family: "Alien Robot";
+  border: ridge 1rem #b6f486;
+}
+
+.marketBtns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 1rem;
+}
+
+.marketBtns button {
+  margin: 5px;
+  padding: 5px;
+  font-family: "Alien Robot";
+  width: 100%;
+  height: 100%;
+  color: #400e63;
+  background-color: #b6f486;
+  border: none;
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.marketBtns button:hover {
+  background-color: #a3f168;
+  scale: 1.05;
+}
+
+.marketBtns input {
+  margin: 5px;
+  padding: 5px;
+  font-family: "Alien Robot";
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: #400e63;
+  color: #b6f486;
+  border: none;
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}

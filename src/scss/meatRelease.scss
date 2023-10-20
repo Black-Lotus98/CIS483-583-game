@@ -1,27 +1,75 @@
-#name{
-    margin-bottom: 0px;
-    font-weight: bold;
-
-}
-#content{
-    display: flex;
-    flex-direction: column;
-    width:850px;
-    font-size: 30px;
-    justify-content: center;
-    align-items: center;
-    margin-left: 40px;
-    margin-top: 0px;
+.invader {
+  grid-area: 1/1/5/13;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0px;
+  font-size: 5rem;
+  font-weight: bold;
 }
 
-#input{
-    display: flex;
-    flex-direction: column;
+.text {
+  grid-area: 5/2/7/12;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+}
+// .content {
+//   grid-area: 1/1/13/13;
+//   display: flex;
+//   flex-direction: column;
+//   width: 850px;
+//   font-size: 30px;
+//   justify-content: center;
+//   align-items: center;
+//   margin-left: 40px;
+//   margin-top: 0px;
+// }
 
+.input {
+  grid-area: 8/2/9/12;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-#input-text{
-    padding: 2px;
-    border: ridge 1rem #b6f486;
-    font-family: "Alien Robot";
+.input-text {
+  padding: 2px;
+  width: 15rem;
+  height: 4rem;
+  font-family: "Alien Robot";
 }
+.meatRelease {
+  grid-area: 9/2/13/12;
+  width: 100%;
+  height: 100%;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+// .meatRelease button {
+//   width: 15rem;
+//   height: 4rem;
+//   font-family: "Alien Robot";
+//   font-weight: bold;
+//   background-color: #b6f486;
+//   color: #400e63;
+//   border: none;
+//   cursor: pointer;
+//   border-radius: 5px;
+//   transition: 0.3s all ease-in-out;
+// }
+
+// .meatRelease button:hover {
+//   scale: 1.05;
+//   background-color: #400e63;
+//   color: #b6f486;
+// }
