@@ -18,8 +18,8 @@ const BirthAndDeaths = (props) => {
                   <p id='name'>Dear Owner of Santa Paravia</p>
                 
       
-                  <p>{gameData.numberOfBirths} were born this year </p>
-                  <p> {gameData.numberOfDeaths} died this year </p>
+                  <p>{gameData.numberOfBirths} humans were born this year </p>
+                  <p> {gameData.numberOfDeaths} humans died this year </p>
                  
       
       

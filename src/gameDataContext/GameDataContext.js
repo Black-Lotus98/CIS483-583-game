@@ -28,11 +28,6 @@ export const GameDataProvider = ({ children }) => {
 
 
 
-
-
-
-
-
     const initialState = {
         sympathizers: sympathizers,
         meat: meat,
