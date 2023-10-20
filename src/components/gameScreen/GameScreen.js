@@ -74,13 +74,13 @@ const GameScreen = (props) => {
       renderedScreen = <MeatRelease changeToBirthsAndDeaths={changeToBirthsAndDeaths} />
       break;
     case "scientistReport":
-      renderedScreen = <Scientists changeToTestPage={changeToTestPage} />;
+      renderedScreen = <Scientists changeToTestPage={changeToTaxes} />;
       break;
     case "map":
       renderedScreen = <Map changeToTestPage={changeToTestPage} />;
       break;
     case "taxes":
-      renderedScreen = <Taxes changeToTestPage={changeToTestPage} />;
+      renderedScreen = <Taxes changeToMap={changeToMap} />;
       break;
     case "birthAndDeaths":
       renderedScreen = <BirthAndDeaths changeToScientistReport={changeToScientistReport} />

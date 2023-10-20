@@ -10,14 +10,14 @@ import Area8 from './areas/Area8';
 import Area9 from './areas/Area9';
 
 const Map = (props) => {
-    const [area1IsExpanded, setArea1IsExpanded] = useState(false);
-    const [area2IsExpanded, setArea2IsExpanded] = useState(false);
+    const [area1IsExpanded, setArea1IsExpanded] = useState(true);
+    const [area2IsExpanded, setArea2IsExpanded] = useState(true);
     const [area3IsExpanded, setArea3IsExpanded] = useState(false);
     const [area4IsExpanded, setArea4IsExpanded] = useState(false);
-    const [area5IsExpanded, setArea5IsExpanded] = useState(true);
-    const [area6IsExpanded, setArea6IsExpanded] = useState(false);
-    const [area7IsExpanded, setArea7IsExpanded] = useState(false);
-    const [area8IsExpanded, setArea8IsExpanded] = useState(false);
+    const [area5IsExpanded, setArea5IsExpanded] = useState(false);
+    const [area6IsExpanded, setArea6IsExpanded] = useState(true);
+    const [area7IsExpanded, setArea7IsExpanded] = useState(true);
+    const [area8IsExpanded, setArea8IsExpanded] = useState(true);
     const [area9IsExpanded, setArea9IsExpanded] = useState(false);
 
     const handleArea1Expand = () => {
