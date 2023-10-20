@@ -24,6 +24,7 @@ export const GameDataProvider = ({ children }) => {
     const deathRate = 0.02;
     const birthRate = 0.015;
     let inputText;
+    
 
 
 
