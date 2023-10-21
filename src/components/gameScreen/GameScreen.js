@@ -10,6 +10,7 @@ import Map from "./map/Map";
 import Scientists from "./scientists/Scientists";
 import BirthAndDeaths from "./BirthsAndDeaths/BirthAndDeaths";
 import CurrentScreenState from '../../gameDataContext/GameScreenContext';
+import MapExpansion from "./MapExpansion/MapExpansion";
 
 
 const GameScreen = (props) => {
@@ -51,18 +52,18 @@ const GameScreen = (props) => {
   const changeToBirthsAndDeaths = () => {
     setCurrentScreen("birthAndDeaths");
   };
+  const changeToMapExpansion = () => {
+    setCurrentScreen("mapExpansion");
+  };
 
   let renderedScreen;
   switch (currentScreen) {
     case "test":
-      renderedScreen = (<TestPage changeToIntroPage={changeToIntroPage} changeToTaxes={changeToTaxes}
-        changeToMap={changeToMap} />
-      );
+      renderedScreen = <TestPage changeToIntroPage={changeToIntroPage} changeToTaxes={changeToTaxes} changeToMap={changeToMap} />
       break;
     case "mainPage":
       renderedScreen = <MainMenu changeToMeatRelease={changeToMeatRelease} changeToStockPage={changeToStockPage}
         changeToMeatPage={changeToMeatPage} />
-
       break;
     case "meatStore":
       renderedScreen = <MeatMarket changeToMainMenu={changeToMainMenu} />;
@@ -77,7 +78,10 @@ const GameScreen = (props) => {
       renderedScreen = <Scientists changeToTestPage={changeToTaxes} />;
       break;
     case "map":
-      renderedScreen = <Map changeToTestPage={changeToTestPage} />;
+      renderedScreen = <Map changeToMapExpansion={changeToMapExpansion} />;
+      break;
+    case "mapExpansion":
+      renderedScreen = <MapExpansion changeToTestPage={changeToTestPage} />;
       break;
     case "taxes":
       renderedScreen = <Taxes changeToMap={changeToMap} />;

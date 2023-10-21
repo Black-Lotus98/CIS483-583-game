@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+
 import Area1 from './areas/Area1';
 import Area2 from './areas/Area2';
 import Area3 from './areas/Area3';
@@ -8,21 +9,27 @@ import Area6 from './areas/Area6';
 import Area7 from './areas/Area7';
 import Area8 from './areas/Area8';
 import Area9 from './areas/Area9';
+import { GameDataContext } from '../../../gameDataContext/GameDataContext';
+
 
 const Map = (props) => {
-    const [area1IsExpanded, setArea1IsExpanded] = useState(true);
-    const [area2IsExpanded, setArea2IsExpanded] = useState(true);
-    const [area3IsExpanded, setArea3IsExpanded] = useState(false);
-    const [area4IsExpanded, setArea4IsExpanded] = useState(false);
-    const [area5IsExpanded, setArea5IsExpanded] = useState(false);
+
+
+    const [gameData, setGameData] = useContext(GameDataContext);
+    const [area1IsExpanded, setArea1IsExpanded] = useState(gameData.north_america);
+    const [area2IsExpanded, setArea2IsExpanded] = useState(gameData.europe);
+    const [area3IsExpanded, setArea3IsExpanded] = useState(gameData.asia);
+    const [area4IsExpanded, setArea4IsExpanded] = useState(gameData.south_america);
+    const [area5IsExpanded, setArea5IsExpanded] = useState(gameData.africa);
     const [area6IsExpanded, setArea6IsExpanded] = useState(true);
     const [area7IsExpanded, setArea7IsExpanded] = useState(true);
-    const [area8IsExpanded, setArea8IsExpanded] = useState(true);
-    const [area9IsExpanded, setArea9IsExpanded] = useState(false);
+    const [area8IsExpanded, setArea8IsExpanded] = useState(gameData.oceania);
+    const [area9IsExpanded, setArea9IsExpanded] = useState(gameData.antarctica);
 
-    const handleArea1Expand = () => {
-        setArea1IsExpanded(!area1IsExpanded);
-    }
+
+    // const handleArea1Expand = () => {
+    //     setArea1IsExpanded(!area1IsExpanded);
+    // }
     const handleArea2Expand = () => {
         setArea2IsExpanded(!area2IsExpanded);
     }
@@ -50,55 +57,18 @@ const Map = (props) => {
     return (
         <div className='map-container'>
 
-            <Area1 areaIsExpanded={area1IsExpanded} />
-            <Area2 areaIsExpanded={area2IsExpanded} />
-            <Area3 areaIsExpanded={area3IsExpanded} />
-            <Area4 areaIsExpanded={area4IsExpanded} />
-            <Area5 areaIsExpanded={area5IsExpanded} />
+            <Area1 areaIsExpanded={area1IsExpanded} opacity={gameData.north_america} />
+            <Area2 areaIsExpanded={area2IsExpanded} opacity={gameData.europe} />
+            <Area3 areaIsExpanded={area3IsExpanded} opacity={gameData.asia} />
+            <Area4 areaIsExpanded={area4IsExpanded} opacity={gameData.south_america} />
+            <Area5 areaIsExpanded={area5IsExpanded} opacity={gameData.africa} />
             <Area6 areaIsExpanded={area6IsExpanded} />
             <Area7 areaIsExpanded={area7IsExpanded} />
-            <Area8 areaIsExpanded={area8IsExpanded} />
-            <Area9 areaIsExpanded={area9IsExpanded} />
+            <Area8 areaIsExpanded={area8IsExpanded} opacity={gameData.oceania} />
+            <Area9 areaIsExpanded={area9IsExpanded} opacity={gameData.antarctica} />
 
-            <div className='area1'>
-                <label htmlFor="area1">Area 1</label>
-                <input type="checkbox" id="area1" onChange={handleArea1Expand} />
-            </div>
-            <div className='area2'>
-                <label htmlFor="area2">Area 2</label>
-                <input type="checkbox" id="area2" onChange={handleArea2Expand} />
-            </div>
-            <div className='area3'>
-                <label htmlFor="area3">Area 3</label>
-                <input type="checkbox" id="area3" onChange={handleArea3Expand} />
-            </div>
-            <div className='area4'>
-                <label htmlFor="area4">Area 4</label>
-                <input type="checkbox" id="area4" onChange={handleArea4Expand} />
-            </div >
-            <div className='area5'>
-                <label htmlFor="area5">Area 5</label>
-                <input type="checkbox" id="area5" checked={area5IsExpanded} onChange={handleArea5Expand} />
-            </div >
-            <div className='area6'>
-                <label htmlFor="area6">Area 6</label>
-                <input type="checkbox" id="area6" onChange={handleArea6Expand} />
-            </div >
-            <div className='area7'>
-                <label htmlFor="area7">Area 7</label>
-                <input type="checkbox" id="area7" onChange={handleArea7Expand} />
-            </div >
-            <div className='area8'>
-                <label htmlFor="area8">Area 8</label>
-                <input type="checkbox" id="area8" onChange={handleArea8Expand} />
-            </div >
-            <div className='area9'>
-                <label htmlFor="area9">Area 9</label>
-                <input type="checkbox" id="area9" onChange={handleArea9Expand} />
-            </div >
             <div className='command-area'>
-                <button className='continue-btn' onClick={props.changeToTestPage}> Continue </button>
-
+                <button className='continue-btn' onClick={props.changeToMapExpansion}> Continue </button>
             </div>
         </div>
     )
