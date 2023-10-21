@@ -21,12 +21,6 @@ export const GameDataProvider = ({ children }) => {
     const treasury_gold = 75;
     const numberOfDeaths = 0;
     const numberOfBirths = 0;
-    const deathRate = 0.02;
-    const birthRate = 0.015;
-    let inputText;
-    
-
-
 
     const initialState = {
         sympathizers: sympathizers,
@@ -34,13 +28,22 @@ export const GameDataProvider = ({ children }) => {
         meat_demand: meat_demand.toFixed(0),
         meat_price: meat_price.toFixed(0),
         country_power: country_power,
+        xeno_matter: 2000,
         treasury_gold: treasury_gold,
-        numberOfDeaths : numberOfDeaths,
-        numberOfBirths : numberOfBirths,
-        deathRate : deathRate,
-        birthRate : birthRate,
-        inputText 
-
+        numberOfDeaths: numberOfDeaths,
+        numberOfBirths: numberOfBirths,
+        deathRate: 0.01,
+        birthRate: 0.02,
+        year: 1400,
+        famine: false,
+        festival: false,
+        south_america: 1,
+        north_america: 1,
+        europe: 0,
+        asia: 0,
+        africa: 0,
+        oceania: 0,
+        antarctica: 0,
     }
 
 
