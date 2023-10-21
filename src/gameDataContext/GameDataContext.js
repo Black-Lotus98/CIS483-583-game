@@ -10,6 +10,7 @@ export const GameDataProvider = ({ children }) => {
 
     const sympathizers = getRandomValue(1, 25);
     const meat = getRandomValue(15, 20) * 1000;
+    // const basePrice = 20;
 
     const meat_demand_Percentage = getRandomValue(20, 50) / 100;
     const meat_demand = meat_demand_Percentage * meat;
@@ -44,7 +45,6 @@ export const GameDataProvider = ({ children }) => {
         oceania: 0,
         antarctica: 0,
     }
-
 
 
 
