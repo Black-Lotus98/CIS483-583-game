@@ -3,6 +3,10 @@ import React, { Fragment } from 'react'
 const Scientists = (props) => {
    
     // logic must be replaced instead of Number
+    // if you have a market, market_amount * 75 revenue 
+    // Base Soldiers = 20, soldiers * 3 = dollar bills expense
+    // woolen mills are weird... 
+    
     return (
         <Fragment>
             <div className = 'Checked-report'>
