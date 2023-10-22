@@ -30,6 +30,9 @@ export const GameDataProvider = ({ children }) => {
         country_power: country_power,
         xeno_matter: 2000,
         treasury_gold: treasury_gold,
+        income_tax: 5,
+        country_tax: 25,
+        sales_tax: 10
         numberOfDeaths: numberOfDeaths,
         numberOfBirths: numberOfBirths,
         deathRate: 0.01,
@@ -43,6 +46,7 @@ export const GameDataProvider = ({ children }) => {
         asia: 0,
         africa: 0,
         oceania: 0,
+        australia: 0
         antarctica: 0,
     }
 
