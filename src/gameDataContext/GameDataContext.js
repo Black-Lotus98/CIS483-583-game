@@ -9,30 +9,42 @@ export const GameDataProvider = ({ children }) => {
     }
 
     const sympathizers = getRandomValue(1, 25);
+    const rebelHumans = getRandomValue(1, 25);
     const meat = getRandomValue(15, 20) * 1000;
-    // const basePrice = 20;
+    const base_meat_price = 20;
 
-    const meat_demand_Percentage = getRandomValue(20, 50) / 100;
-    const meat_demand = meat_demand_Percentage * meat;
-    // const meat_price = basePrice * (meat_demand_Percentage / (meat * (sympathizers / 100)));
+    const alienMeatDemand = 2;
+    const meat_demand_Percentage = getRandomValue(20, 70);
+    const meat_demand = meat_demand_Percentage / 100 * meat;
+    const alienPopulation = meat_demand / alienMeatDemand
 
-    const meat_price = 20;
-    const country_power = 100;
-    const treasury_gold = 75;
+    let priceAdjustment = 1;
+
+    if (meat_demand > meat) {
+        priceAdjustment = 1.2; // Shortage - increase price 
+    }
+    let randomAdjustment = 0.9 + Math.random() * 0.2;
+
+    let meat_price = base_meat_price * priceAdjustment * randomAdjustment;
+
+
+    // const meat_price = 20;
     const numberOfDeaths = 0;
     const numberOfBirths = 0;
 
+
     const initialState = {
+        alienPopulation: alienPopulation,
         sympathizers: sympathizers,
+        rebelHumans: rebelHumans,
         meat: meat,
         meat_demand: meat_demand.toFixed(0),
         meat_price: meat_price.toFixed(0),
-        country_power: country_power,
         xeno_matter: 2000,
-        treasury_gold: treasury_gold,
+        scientists: 25,
         income_tax: 5,
         country_tax: 25,
-        sales_tax: 10
+        sales_tax: 10,
         numberOfDeaths: numberOfDeaths,
         numberOfBirths: numberOfBirths,
         deathRate: 0.01,
@@ -46,7 +58,6 @@ export const GameDataProvider = ({ children }) => {
         asia: 0,
         africa: 0,
         oceania: 0,
-        australia: 0
         antarctica: 0,
     }
 

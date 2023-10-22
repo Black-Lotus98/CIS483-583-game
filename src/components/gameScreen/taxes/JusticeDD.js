@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 /**
  * Dropdown component for selecting justice levels
@@ -6,16 +6,16 @@ import React from 'react';
  * @param {function} onChange - Callback function when the value changes
  * @returns {JSX.Element} - The dropdown component
  */
-function JusticeDropdown({selectedValue, onChange}){
-  return(
-    <div className="updateJustice">
+function JusticeDropdown({ selectedValue, onChange }) {
+  return (
+    <Fragment>
       <select value={selectedValue} onChange={onChange}>
         <option value="very fair">Very Fair</option>
         <option value="fair">Fair</option>
         <option value="harsh">Harsh</option>
         <option value="outrageous">Outrageous</option>
       </select>
-    </div>
+    </Fragment>
   );
 }
 export default JusticeDropdown;

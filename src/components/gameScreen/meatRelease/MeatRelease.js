@@ -7,12 +7,12 @@ const MeatRelease = (props) => {
   const [inputValue, setInputValue] = useState(0);
 
   const releasedAmount = parseInt(inputValue);
-  let totalSymps = gameData.sympathizers;
+  let alienPopulation = gameData.alienPopulation;
 
-  let births = totalSymps * gameData.birthRate;
+  let births = alienPopulation * gameData.birthRate;
   births = Math.floor(births);
 
-  let deaths = totalSymps * gameData.deathRate;
+  let deaths = alienPopulation * gameData.deathRate;
   deaths = Math.floor(deaths);
 
   // Random chance of famine 
@@ -38,7 +38,9 @@ const MeatRelease = (props) => {
   }
 
 
-  gameData.sympathizers += births - deaths;
+  gameData.alienPopulation = alienPopulation + births - deaths;
+  console.log('gameData.alienPopulation', gameData.alienPopulation)
+
 
   const adjustDeathsAndBirths = () => {
     if (releasedAmount < gameData.meat * 0.1) {

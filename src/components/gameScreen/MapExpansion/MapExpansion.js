@@ -1,15 +1,9 @@
-import React, { useState, useContext } from 'react'
+import React, { useContext } from 'react'
 
 import { GameDataContext } from '../../../gameDataContext/GameDataContext';
-import Area2 from '../map/areas/Area2';
-import Area3 from '../map/areas/Area3';
-import Area5 from '../map/areas/Area5';
-import Area8 from '../map/areas/Area8';
-import Area9 from '../map/areas/Area9';
-
 
 const MapExpansion = (props) => {
-
+    console.log('props.Map', props)
 
     const [gameData, setGameData] = useContext(GameDataContext);
 
@@ -18,28 +12,44 @@ const MapExpansion = (props) => {
     let africaExpansion = gameData.africa;
     let oceaniaExpansion = gameData.oceania;
     let antarcticaExpansion = gameData.antarctica;
+    let xeno_matter = gameData.xeno_matter;
 
     const handleEuropaExpansion = () => {
         if (europeExpansion < 1) {
-            setGameData(
-                {
-                    ...gameData,
-                    europe: europeExpansion + 0.2
-                });
-            props.changeToTestPage();
+            if (gameData.xeno_matter > 2000) {
+
+                setGameData(
+                    {
+                        ...gameData,
+                        europe: europeExpansion + 0.2,
+                        xeno_matter: xeno_matter - 2000
+                    });
+                props.changeToMap();
+            }
+            else {
+                alert("You do not have enough xeno matter to expand Europe");
+            }
         }
         else {
             alert("You have already expanded Europe");
         }
     }
     const handleAsiaExpansion = () => {
+
         if (asiaExpansion < 1) {
-            setGameData(
-                {
-                    ...gameData,
-                    asia: asiaExpansion + 0.2
-                });
-            props.changeToTestPage();
+            if (gameData.xeno_matter > 4000) {
+                setGameData(
+                    {
+                        ...gameData,
+                        asia: asiaExpansion + 0.2,
+                        xeno_matter: xeno_matter - 4000
+
+                    });
+                props.changeToMap();
+            }
+            else {
+                alert("You do not have enough xeno matter to expand Asia");
+            }
         }
         else {
             alert("You have already expanded Asia");
@@ -47,13 +57,19 @@ const MapExpansion = (props) => {
     }
 
     const handleAfricaExpansion = () => {
-        if (africaExpansion < 1) {
-            setGameData(
-                {
-                    ...gameData,
-                    africa: africaExpansion + 0.2
-                });
-            props.changeToTestPage();
+        if (gameData.xeno_matter > 3500) {
+            if (africaExpansion < 1) {
+                setGameData(
+                    {
+                        ...gameData,
+                        africa: africaExpansion + 0.2,
+                        xeno_matter: xeno_matter - 3500
+                    });
+                props.changeToMap();
+            }
+            else {
+                alert("You do not have enough xeno matter to expand Africa");
+            }
         }
         else {
             alert("You have already expanded Africa");
@@ -62,12 +78,18 @@ const MapExpansion = (props) => {
 
     const handleOceaniaExpansion = () => {
         if (oceaniaExpansion < 1) {
-            setGameData(
-                {
-                    ...gameData,
-                    oceania: oceaniaExpansion + 0.2
-                });
-            props.changeToTestPage();
+            if (gameData.xeno_matter > 1500) {
+                setGameData(
+                    {
+                        ...gameData,
+                        oceania: oceaniaExpansion + 0.2,
+                        xeno_matter: xeno_matter - 1500
+                    });
+                props.changeToMap();
+            }
+            else {
+                alert("You do not have enough xeno matter to expand Oceania");
+            }
         }
         else {
             alert("You have already expanded Oceania");
@@ -76,12 +98,18 @@ const MapExpansion = (props) => {
 
     const handleAntarcticaExpansion = () => {
         if (antarcticaExpansion < 1) {
-            setGameData(
-                {
-                    ...gameData,
-                    antarctica: antarcticaExpansion + 0.2
-                });
-            props.changeToTestPage();
+            if (gameData.xeno_matter > 1000) {
+                setGameData(
+                    {
+                        ...gameData,
+                        antarctica: antarcticaExpansion + 0.2,
+                        xeno_matter: xeno_matter - 1000
+                    });
+                props.changeToMap();
+            }
+            else {
+                alert("You do not have enough xeno matter to expand Antarctica");
+            }
         }
         else {
             alert("You have already expanded Antarctica");
@@ -124,7 +152,7 @@ const MapExpansion = (props) => {
             </div>
 
             <div className='command-area'>
-                <button className='continue-btn' onClick={props.changeToTestPage}> Exit </button>
+                <button className='continue-btn' onClick={props.changeToScientistsExpansion}> Exit </button>
             </div>
         </div >
     )

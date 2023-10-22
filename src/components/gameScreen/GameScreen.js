@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import IntroPage from "./introPage/IntroPage";
 import TestPage from "./testPage/TestPage";
 import MainMenu from "./mainMenu/MainMenu";
@@ -7,10 +7,11 @@ import StockMarket from "./stockMarket/StockMarket";
 import MeatRelease from "./meatRelease/MeatRelease";
 import Taxes from "./taxes/Taxes";
 import Map from "./map/Map";
-import Scientists from "./scientists/Scientists";
+import Report from "./report/Report";
 import BirthAndDeaths from "./BirthsAndDeaths/BirthAndDeaths";
 import CurrentScreenState from '../../gameDataContext/GameScreenContext';
-import MapExpansion from "./MapExpansion/MapExpansion";
+import MapExpansion from "./mapExpansion/MapExpansion";
+import ScientistsExpansion from "./scientistsExpansion/ScientistsExpansion";
 
 
 const GameScreen = (props) => {
@@ -46,14 +47,17 @@ const GameScreen = (props) => {
   const changeToMap = () => {
     setCurrentScreen("map");
   };
-  const changeToScientistReport = () => {
-    setCurrentScreen("scientistReport");
+  const changeToReport = () => {
+    setCurrentScreen("report");
   };
   const changeToBirthsAndDeaths = () => {
     setCurrentScreen("birthAndDeaths");
   };
   const changeToMapExpansion = () => {
     setCurrentScreen("mapExpansion");
+  };
+  const changeToScientistsExpansion = () => {
+    setCurrentScreen("scientistsExpansion");
   };
 
   let renderedScreen;
@@ -74,20 +78,23 @@ const GameScreen = (props) => {
     case "meatRelease":
       renderedScreen = <MeatRelease changeToBirthsAndDeaths={changeToBirthsAndDeaths} />
       break;
-    case "scientistReport":
-      renderedScreen = <Scientists changeToTestPage={changeToTaxes} />;
+    case "report":
+      renderedScreen = <Report changeToMainMenu={changeToMainMenu} />;
       break;
     case "map":
-      renderedScreen = <Map changeToMapExpansion={changeToMapExpansion} />;
+      renderedScreen = <Map changeToMap={changeToMap} changeToMapExpansion={changeToMapExpansion} />;
       break;
     case "mapExpansion":
-      renderedScreen = <MapExpansion changeToTestPage={changeToTestPage} />;
+      renderedScreen = <MapExpansion changeToMap={changeToMap} changeToScientistsExpansion={changeToScientistsExpansion} />;
+      break;
+    case "scientistsExpansion":
+      renderedScreen = <ScientistsExpansion changeToReport={changeToReport} />;
       break;
     case "taxes":
       renderedScreen = <Taxes changeToMap={changeToMap} />;
       break;
     case "birthAndDeaths":
-      renderedScreen = <BirthAndDeaths changeToScientistReport={changeToScientistReport} />
+      renderedScreen = <BirthAndDeaths changeToTaxes={changeToTaxes} />
       break;
     default:
       renderedScreen = <IntroPage changeToMainMenu={changeToMainMenu} />;

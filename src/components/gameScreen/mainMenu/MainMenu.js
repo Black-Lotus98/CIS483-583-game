@@ -12,51 +12,39 @@ const MainMenu = (props) => {
   //   });
   // };
 
-
-  const sampleData = {
-    sympathizers: gameData.sympathizers,
-    rebelHumans: gameData.rebelHumans,
-    meat: gameData.meat,
-    meat_demand: gameData.meat_demand,
-    meat_price: gameData.meat_price,
-    country_power: gameData.country_power,
-    treasury_gold: gameData.treasury_gold,
-  }
-
   return (
     <Fragment>
       <div className="report">
         {/* todo: Figure out x, y, z */}
         <h3>Big Alien Mafia Gangster Boss</h3>
-        <h4>Human Beings sacrificed {sampleData.rebelHumans}% of your food!</h4>
-        <h5>y Weather z Harvest</h5>
+        <h4>Human saved by rebel humans {gameData.rebelHumans}% of your food!</h4>
       </div>
       <div className="stats">
         {/* todo: numbers must be defined */}
         <div className="grains d-stats-flex">
           <span>Meat Reserve</span>
-          <span className="numbers">{parseInt(sampleData.meat)}</span>
-          <span>Bushels</span>
+          <span className="numbers">{parseInt(gameData.meat)}</span>
+          <span>Container</span>
         </div>
         <div className="grain-demand d-stats-flex">
           <span>Meat Demand</span>
-          <span className="numbers">{parseInt(sampleData.meat_demand)}</span>
-          <span>Bushels</span>
+          <span className="numbers">{parseInt(gameData.meat_demand)}</span>
+          <span>Container</span>
         </div>
         <div className="grain-price d-stats-flex">
           <span>Price of Meat</span>
-          <span className="numbers">{parseFloat(sampleData.meat_price)}</span>
+          <span className="numbers">{parseFloat(gameData.meat_price)}</span>
           <span>per 1000</span>
         </div>
         <div className="land-price d-stats-flex">
-          <span>Country Power</span>
-          <span className="numbers">{parseInt(sampleData.country_power)}</span>
-          <span>Acre</span>
+          <span>Stock Price</span>
+          <span className="numbers">{parseInt(gameData.country_power)}</span>
+          <span>Stock</span>
         </div>
         <div className="treasury-gold d-stats-flex">
-          <span>Treasury Gold</span>
-          <span className="numbers">{parseInt(sampleData.treasury_gold)}</span>
-          <span>Florins</span>
+          <span>Treasury Xeno</span>
+          <span className="numbers">{parseInt(gameData.xeno_matter)}</span>
+          <span>xeno matter</span>
         </div>
       </div>
       <div className="instructions">

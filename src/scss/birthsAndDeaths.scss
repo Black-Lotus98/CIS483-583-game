@@ -1,28 +1,25 @@
-.myDiv{
-    margin: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    width: max-content;
-
+.myDiv {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: max-content;
 }
-#name{
-    margin-bottom: 40px;
-    font-weight: bold;
-    font-size: larger;
-}
-
-.continue-btn{
-    margin-top: 20px;
+.name {
+  margin-bottom: 40px;
+  font-weight: bold;
+  font-size: larger;
 }
 
-.cont{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 170px;
-    margin-top: 70px;
+.continue-btn {
+  margin-top: 20px;
+}
 
+.cont {
+  grid-area: 1/1/13/13;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
