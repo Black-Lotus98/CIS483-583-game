@@ -23,4 +23,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.reset-game-btn {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10rem;
+  height: 4rem;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #b6f486;
+  color: #400e63;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
 }

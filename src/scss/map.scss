@@ -16,6 +16,7 @@
   width: 100%;
   height: 100%;
 }
+
 .area2 {
   grid-area: 13 / 3 / 14 / 4;
   display: flex;
@@ -34,6 +35,7 @@
   width: 100%;
   height: 100%;
 }
+
 .area4 {
   grid-area: 13 / 5 / 14 / 6;
   display: flex;
@@ -109,10 +111,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  flex-direction: column;
 
   & svg {
-    width: 90%;
-    height: 90%;
+    width: 70%;
+    height: 70%;
   }
 
   &-1 {
@@ -124,6 +128,7 @@
   &-3 {
     grid-area: 1/ 9/ 5/ 13;
   }
+
   &-4 {
     grid-area: 5/ 1/ 9/ 5;
   }
@@ -143,4 +148,75 @@
   &-9 {
     grid-area: 9/ 9/ 13/ 13;
   }
+}
+.scientist {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80%;
+  height: 80%;
+  margin: 25%;
+
+  &-1 {
+    grid-area: 1/ 1/ 5/ 2;
+  }
+  &-2 {
+    grid-area: 1/ 2/ 5/ 3;
+  }
+  &-3 {
+    grid-area: 1/3/ 5/ 4;
+  }
+}
+
+.continents {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &_btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    transition: 0.2s all ease-in-out;
+    border: 5px ridge white;
+  }
+  &_btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  &_btn:active {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+.south_america {
+  background-image: url(../images/south_america.png);
+}
+.europe {
+  background-image: url(../images/europa.png);
+}
+.north_america {
+  background-image: url(../images/north_america.png);
+}
+
+.asia {
+  background-image: url(../images/asia.png);
+}
+.africa {
+  background-image: url(../images/africa.png);
+}
+
+.oceania {
+  background-image: url(../images/oceania.png);
+}
+.antarctica {
+  background-image: url(../images/antarctica.png);
 }
