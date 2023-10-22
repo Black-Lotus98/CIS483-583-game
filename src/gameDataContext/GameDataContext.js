@@ -10,6 +10,7 @@ export const GameDataProvider = ({ children }) => {
 
     const sympathizers = getRandomValue(1, 25);
     const meat = getRandomValue(15, 20) * 1000;
+    // const basePrice = 20;
 
     const meat_demand_Percentage = getRandomValue(20, 50) / 100;
     const meat_demand = meat_demand_Percentage * meat;
@@ -20,8 +21,6 @@ export const GameDataProvider = ({ children }) => {
     const treasury_gold = 75;
     const numberOfDeaths = 0;
     const numberOfBirths = 0;
-    const deathRate = 0.01;
-    const birthRate = 0.02;
 
     const initialState = {
         sympathizers: sympathizers,
@@ -29,16 +28,15 @@ export const GameDataProvider = ({ children }) => {
         meat_demand: meat_demand.toFixed(0),
         meat_price: meat_price.toFixed(0),
         country_power: country_power,
+        xeno_matter: 2000,
         treasury_gold: treasury_gold,
-<<<<<<< HEAD
         income_tax: 5,
         country_tax: 25,
         sales_tax: 10
-=======
         numberOfDeaths: numberOfDeaths,
         numberOfBirths: numberOfBirths,
-        deathRate: deathRate,
-        birthRate: birthRate,
+        deathRate: 0.01,
+        birthRate: 0.02,
         year: 1400,
         famine: false,
         festival: false,
@@ -49,9 +47,8 @@ export const GameDataProvider = ({ children }) => {
         africa: 0,
         oceania: 0,
         australia: 0
->>>>>>> main
+        antarctica: 0,
     }
-
 
 
 

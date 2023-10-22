@@ -111,10 +111,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  flex-direction: column;
 
   & svg {
-    width: 90%;
-    height: 90%;
+    width: 70%;
+    height: 70%;
   }
 
   &-1 {
@@ -168,15 +170,53 @@
   }
 }
 
-.south_america {
+.continents {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-clip: content-box;
-  background-image: url(../images/south_america.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+
+  &_btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    transition: 0.2s all ease-in-out;
+    border: 5px ridge white;
+  }
+  &_btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  &_btn:active {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+.south_america {
+  background-image: url(../images/south_america.png);
+}
+.europe {
+  background-image: url(../images/europa.png);
+}
+.north_america {
+  background-image: url(../images/north_america.png);
+}
+
+.asia {
+  background-image: url(../images/asia.png);
+}
+.africa {
+  background-image: url(../images/africa.png);
+}
+
+.oceania {
+  background-image: url(../images/oceania.png);
+}
+.antarctica {
+  background-image: url(../images/antarctica.png);
 }
