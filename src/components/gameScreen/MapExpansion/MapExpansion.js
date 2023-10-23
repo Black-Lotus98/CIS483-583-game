@@ -57,8 +57,8 @@ const MapExpansion = (props) => {
     }
 
     const handleAfricaExpansion = () => {
-        if (gameData.xeno_matter > 3500) {
-            if (africaExpansion < 1) {
+        if (africaExpansion < 1) {
+            if (gameData.xeno_matter > 3500) {
                 setGameData(
                     {
                         ...gameData,

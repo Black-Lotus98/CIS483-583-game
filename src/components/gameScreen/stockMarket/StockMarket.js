@@ -7,21 +7,8 @@ const StockMarket = (props) => {
     const [buyStock, setBuyStock] = useState(false);
     const [inputValue, setInputValue] = useState(0);
 
+    let stockPrice = gameData.stock_price;
 
-    const baseStockPrice = 10;
-
-    let stockSupply = gameData.maxStock - gameData.owned_stocks;
-    let stockDemand = gameData.sympathizers / 1000;
-
-
-    let priceAdjustment = 1;
-    if (stockDemand > stockSupply) {
-        priceAdjustment = 1.1;
-    }
-
-
-
-    let stockPrice = baseStockPrice * priceAdjustment * gameData.randomAdjustment;
 
     const setBuyStockState = () => {
         setBuyStock(!buyStock);
@@ -42,10 +29,13 @@ const StockMarket = (props) => {
                 updatedStock = gameData.owned_stocks + StockAmount;
                 xenoAmount -= stockPrice * StockAmount;
             }
-        } else {
+
+        } else if (gameData.owned_stocks <= 0) {
+            alert('You do not have enough stocks to sell');
+        }
+        else {
             updatedStock = gameData.owned_stocks - StockAmount;
             xenoAmount += stockPrice * StockAmount;
-
         }
 
         setGameData({

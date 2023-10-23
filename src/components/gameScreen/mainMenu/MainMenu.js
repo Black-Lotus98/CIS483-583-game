@@ -18,6 +18,7 @@ const MainMenu = (props) => {
         {/* todo: Figure out x, y, z */}
         <h3>Big Alien Mafia Gangster Boss</h3>
         <h4>Human saved by rebel humans {gameData.rebelHumans}% of your food!</h4>
+        <h4>You are in year {gameData.year} </h4>
       </div>
       <div className="stats">
         {/* todo: numbers must be defined */}
@@ -38,7 +39,7 @@ const MainMenu = (props) => {
         </div>
         <div className="land-price d-stats-flex">
           <span>Stock Price</span>
-          <span className="numbers">{parseInt(gameData.country_power)}</span>
+          <span className="numbers">{parseInt(gameData.stock_price)}</span>
           <span>Stock</span>
         </div>
         <div className="treasury-gold d-stats-flex">
