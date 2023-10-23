@@ -67,8 +67,7 @@ const Report = (props) => {
                 xeno_matter: xeno_matter + earnings,
             });
 
-            if (gameData.xeno_matter < 10) {
-                gameData.xeno_matter = 0;
+            if (gameData.alienPopulation < 100) {
                 alert('You have lost the game press on the  reset button to play again');
             }
             else {
